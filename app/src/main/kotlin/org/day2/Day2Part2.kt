@@ -11,6 +11,10 @@ class Day2Part2 : Day2Part1() {
 }
 
 fun main() {
+    val listExample: List<Int> = (1..5).toList()
+    listExample.indices.forEach { index ->
+        println(listExample.subList(0, index) + listExample.subList(index + 1, listExample.size))
+    }
     val rawReport: String =
         Thread.currentThread().contextClassLoader.getResourceAsStream("day2/data_day2.txt")?.bufferedReader()
             ?.readText()
